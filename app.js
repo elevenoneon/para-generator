@@ -3,11 +3,10 @@ const container = document.querySelector(".container");
 
 const generateWord = (n) => {
     let text = "";
-    const letters = "qwertyuioplkjhgfdsazxcvbnm";
+    const letters = "abcdefghijklmnopqrstuvwxyz";
 
-    for (let i = 0; i < n; ++i) {
-        const random = (Math.random() * 25).toFixed(0);
-        text += letters[random];
+    for (let i = 1; i <= n; ++i) {
+        text += letters[(Math.random() * 25).toFixed(0)];
     }
 
     return text;
